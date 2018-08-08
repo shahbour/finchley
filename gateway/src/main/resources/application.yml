@@ -1,0 +1,14 @@
+zuul:
+  routes:
+    resource:
+      url: http://localhost:8085
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:9191/uaa/user
+    client:
+      accessTokenUri: http://localhost:9191/uaa/oauth/token
+      userAuthorizationUri: http://localhost:9191/uaa/oauth/authorize
+      clientId: acme
+      clientSecret: acmesecret
+      grant-type: authorization_code
